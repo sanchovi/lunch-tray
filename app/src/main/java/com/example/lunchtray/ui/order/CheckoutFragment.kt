@@ -21,6 +21,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentCheckoutBinding
 import com.example.lunchtray.model.OrderViewModel
@@ -63,6 +64,8 @@ class CheckoutFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             // TODO: initialize the OrderViewModel and CheckoutFragment variables
+            binding.viewModel = sharedViewModel
+            binding.checkoutFragment = this.checkoutFragment
         }
     }
 
@@ -71,7 +74,9 @@ class CheckoutFragment : Fragment() {
      */
     fun cancelOrder() {
         // TODO: Reset order in view model
+        sharedViewModel.resetOrder()
         // TODO: Navigate back to the [StartFragment] to start over
+        view?.findNavController()?.navigate("action_checkoutFragment_to_startOrderFragment")
     }
 
     /**
@@ -81,7 +86,9 @@ class CheckoutFragment : Fragment() {
         // Show snackbar to "confirm" order
         Snackbar.make(binding.root, R.string.submit_order, Snackbar.LENGTH_SHORT).show()
         // TODO: Reset order in view model
+        sharedViewModel.resetOrder()
         // TODO: Navigate back to the [StartFragment] to start over
+        view?.findNavController()?.navigate("action_checkoutFragment_to_startOrderFragment")
     }
 
     /**
