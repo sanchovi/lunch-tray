@@ -34,8 +34,12 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//
+        //find navhostfragment by navhostfragment id
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        //point it to xml for navhost
 
-        // TODO: Retrieve NavController from the NavHostFragment
-        navController = binding.navHostFragment.findNavController()
+//        // TODO: Retrieve NavController from the NavHostFragment
+        navController = navHostFragment.navController
     }
 }
