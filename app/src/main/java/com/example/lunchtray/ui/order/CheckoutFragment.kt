@@ -76,7 +76,7 @@ class CheckoutFragment : Fragment() {
         // TODO: Reset order in view model
         sharedViewModel.resetOrder()
         // TODO: Navigate back to the [StartFragment] to start over
-        view?.findNavController()?.navigate("action_checkoutFragment_to_startOrderFragment")
+        view?.findNavController()?.navigate(R.id.action_checkoutFragment_to_startOrderFragment)
     }
 
     /**
@@ -88,7 +88,7 @@ class CheckoutFragment : Fragment() {
         // TODO: Reset order in view model
         sharedViewModel.resetOrder()
         // TODO: Navigate back to the [StartFragment] to start over
-        view?.findNavController()?.navigate("action_checkoutFragment_to_startOrderFragment")
+        view?.findNavController()?.navigate(R.id.action_checkoutFragment_to_startOrderFragment)
     }
 
     /**
