@@ -59,7 +59,7 @@ class SideMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the SideMenuFragment variables
+            // init the SideMenuFragment variables
             binding.viewModel = sharedViewModel
             binding.sideMenuFragment = this.sideMenuFragment
             sideMenuFragment = this@SideMenuFragment
@@ -70,7 +70,7 @@ class SideMenuFragment : Fragment() {
      * Navigate to the accompaniments menu fragment
      */
     fun goToNextScreen() {
-        // TODO: Navigate to the AccompanimentMenuFragment
+        // go to accompaniment
         view?.findNavController()?.navigate(R.id.action_sideMenuFragment_to_accompanimentMenuFragment)
     }
 
@@ -78,9 +78,8 @@ class SideMenuFragment : Fragment() {
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
+        // reset order and go back to start
         sharedViewModel.resetOrder()
-        // TODO: Navigate back to the [StartFragment] to start over
         view?.findNavController()?.navigate(R.id.action_sideMenuFragment_to_startOrderFragment)
     }
 

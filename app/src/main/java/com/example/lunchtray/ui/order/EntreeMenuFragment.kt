@@ -59,7 +59,7 @@ class EntreeMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the EntreeMenuFragment variables
+            // init EntreeMenuFragment variables
             binding.viewModel = sharedViewModel
             binding.entreeMenuFragment = this.entreeMenuFragment
             entreeMenuFragment = this@EntreeMenuFragment
@@ -70,7 +70,7 @@ class EntreeMenuFragment : Fragment() {
      * Navigate to the side menu fragment.
      */
     fun goToNextScreen() {
-        // TODO: Navigate to the SideMenuFragment
+        // go to side menu
         view?.findNavController()?.navigate(R.id.action_entreeMenuFragment_to_sideMenuFragment)
     }
 
@@ -78,9 +78,8 @@ class EntreeMenuFragment : Fragment() {
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
+        //reset order and go back to start
         sharedViewModel.resetOrder()
-        // TODO: Navigate back to the [StartFragment] to start over
         view?.findNavController()?.navigate(R.id.action_entreeMenuFragment_to_startOrderFragment)
     }
 

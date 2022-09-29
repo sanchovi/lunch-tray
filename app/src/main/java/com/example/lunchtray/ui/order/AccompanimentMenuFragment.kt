@@ -60,7 +60,7 @@ class AccompanimentMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the AccompanimentMenuFragment variables
+            // init AccompanimentMenuFragment variables
             binding.viewModel = sharedViewModel
             binding.accompanimentMenuFragment = this.accompanimentMenuFragment
             accompanimentMenuFragment = this@AccompanimentMenuFragment
@@ -72,7 +72,7 @@ class AccompanimentMenuFragment : Fragment() {
      * Navigate to the checkout fragment.
      */
     fun goToNextScreen() {
-        // TODO: Navigate to the CheckoutFragment
+        // go to checkout
         view?.findNavController()?.navigate(R.id.action_accompanimentMenuFragment_to_checkoutFragment)
     }
 
@@ -80,9 +80,8 @@ class AccompanimentMenuFragment : Fragment() {
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
+        // reset order and go to start
         sharedViewModel.resetOrder()
-        // TODO: Navigate back to the [StartFragment] to start over
         view?.findNavController()?.navigate(R.id.action_accompanimentMenuFragment_to_startOrderFragment)
     }
 
