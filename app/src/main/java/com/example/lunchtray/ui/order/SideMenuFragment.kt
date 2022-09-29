@@ -62,6 +62,7 @@ class SideMenuFragment : Fragment() {
             // TODO: initialize the SideMenuFragment variables
             binding.viewModel = sharedViewModel
             binding.sideMenuFragment = this.sideMenuFragment
+            sideMenuFragment = this@SideMenuFragment
         }
     }
 

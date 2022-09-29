@@ -62,6 +62,7 @@ class EntreeMenuFragment : Fragment() {
             // TODO: initialize the EntreeMenuFragment variables
             binding.viewModel = sharedViewModel
             binding.entreeMenuFragment = this.entreeMenuFragment
+            entreeMenuFragment = this@EntreeMenuFragment
         }
     }
 

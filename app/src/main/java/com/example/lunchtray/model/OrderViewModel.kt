@@ -137,12 +137,11 @@ class OrderViewModel : ViewModel() {
     private fun updateSubtotal(itemPrice: Double) {
         // update subtotal value to reflect the price of the recently added item.
         if (_subtotal.value != null){
-            _subtotal.value = _subtotal.value!!.plus(itemPrice)
+            _subtotal.value = _subtotal.value!! + itemPrice
         // subtotal is null, this is the first item we give it
         } else {
             _subtotal.value = itemPrice
         }
-
         // add tax to get total
         calculateTaxAndTotal()
     }
@@ -152,9 +151,9 @@ class OrderViewModel : ViewModel() {
      */
     fun calculateTaxAndTotal() {
         // calulate cost of tax
-        _tax.value = _subtotal.value?.times(taxRate)
+        _tax.value = _subtotal.value!!.times(taxRate)
         // set total
-        _total.value = _subtotal.value?.plus(_tax.value!!)
+        _total.value = _subtotal.value!!.plus(_tax.value!!)
     }
 
     /**

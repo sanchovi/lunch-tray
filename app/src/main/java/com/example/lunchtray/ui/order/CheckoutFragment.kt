@@ -66,6 +66,7 @@ class CheckoutFragment : Fragment() {
             // TODO: initialize the OrderViewModel and CheckoutFragment variables
             binding.viewModel = sharedViewModel
             binding.checkoutFragment = this.checkoutFragment
+            checkoutFragment = this@CheckoutFragment
         }
     }
 

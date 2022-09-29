@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         //point it to xml for navhost
 
-//        // TODO: Retrieve NavController from the NavHostFragment
         navController = navHostFragment.navController
     }
 }

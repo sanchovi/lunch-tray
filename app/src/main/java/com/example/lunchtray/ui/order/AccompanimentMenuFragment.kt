@@ -63,6 +63,8 @@ class AccompanimentMenuFragment : Fragment() {
             // TODO: initialize the AccompanimentMenuFragment variables
             binding.viewModel = sharedViewModel
             binding.accompanimentMenuFragment = this.accompanimentMenuFragment
+            accompanimentMenuFragment = this@AccompanimentMenuFragment
+
         }
     }
 
